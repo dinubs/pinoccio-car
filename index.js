@@ -2,12 +2,12 @@ var twilio = require('twilio');
 var express = require('express');
 var pinoccio = require('pinoccio'); // works in browserify and server side
 // create an api instance with default options
-var api = pinoccio("655989d70043b163c8bb8bab7d3717e3");
+var api = pinoccio("PinoccioAPIKey");
 // Create a new REST API client to make authenticated requests against the
 // twilio back end
 var client = new twilio.RestClient(
-	'AC207091ff604cd8100708f207f2afb95a', 
-	'3ef5004961dbd6de9c24ce38a42df5fd'
+	'TwilioKey', 
+	'TwilioSecretKey'
 );
 var availableCommands = ["forward", "backward", "no", "go", "left", "right", "straight"];
 var app = express();
